@@ -18,4 +18,13 @@ public class lect1 {
     // Write Once, Run Anywhere!
 
     // 자바 특징 중 객체지향 : 자바의 모든 것들은 객체(class)로 구성.
+
+    // JDK (Java Development Kit)  ← Java 개발에 필요한 모든 것 포함
+    // ├── JRE (Java Runtime Environment)  ← Java 실행 환경
+    // │   ├── JVM (Java Virtual Machine)  ← 바이트코드 실행
+    // │   ├── Java 라이브러리 (rt.jar 등)  ← 필수 API 제공 (java.lang, java.util 등)
+    // │   ├── 클래스 로더 (Class Loader)  ← .class 파일 로드
+    // │
+    // ├── Javac (Java Compiler)  ← .java → .class 변환
+    // ├── 기타 개발 도구 (디버거, Javadoc 생성기, JAR 도구 등)
 }
