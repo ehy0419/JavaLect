@@ -1,6 +1,7 @@
-package org.example.week1; // 클래스 파일이 포함된 패키지
+package org.example.week1.basic1_3; // 클래스 파일이 포함된 패키지
 
 import org.example.MyNewClassTest;
+import org.example.week1.MyNewClass;
 
 public class Lect3 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example.week1;
+package org.example.week1.basic1_3;
 
 public class Lect2 {
     public static void main(String[] args) {
