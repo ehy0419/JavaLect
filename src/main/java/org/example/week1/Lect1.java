@@ -1,6 +1,6 @@
 package org.example.week1;
 
-public class lect1 {
+public class Lect1 {
 
     //// 학습 키워드
     // - [ ]  JDK - Java 프로그램을 개발할 때 필요한 개발 도구 모음

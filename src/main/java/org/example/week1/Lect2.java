@@ -1,6 +1,6 @@
 package org.example.week1;
 
-public class lect2 {
+public class Lect2 {
     public static void main(String[] args) {
 
         //// 학습 키워드
