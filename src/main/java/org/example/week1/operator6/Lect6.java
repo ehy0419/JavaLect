@@ -147,7 +147,7 @@ public class Lect6 {
         System.out.println("10 >= 10: " + (10 >= 10)); // true
         System.out.println("10 <= 5: " + (10 <= 5)); // false
 
-        // 비교 연산자 정리
+        /// 비교 연산자 정리
         // 연산자	|설명	                    |예제	    |결과
         // ==	    |두 값이 같으면 true 	        |10 == 10	|true
         // != 	    |두 값이 다르면 true 	        |10 != 5	|true
@@ -155,6 +155,9 @@ public class Lect6 {
         // < 	    |왼쪽 값이 작으면 true 	    |10 < 5	    |false
         // >=	    |왼쪽 값이 크거나 같으면 true 	|10 >= 10	|true
         // <= 	    |왼쪽 값이 작거나 같으면 true 	|10 <= 5	|false
+
+
+
 
         /// 논리연산자
         /// AND 연산자(&&)
@@ -169,8 +172,8 @@ public class Lect6 {
 
         /// OR 연산자(||)
         // OR 연산자(||) 둘 중 하나라도 참이면 true 를 반환
-        // - OR연산자는 일반적인 키보드에서 `Enter` 키 위에 위치해있습니다.
-        //- `Shift` + `\`를 누르면 `|`을 입력할 수 있습니다.
+        // OR연산자는 일반적인 키보드에서 `Enter` 키 위에 위치해있습니다.
+        // `Shift` + `\`를 누르면 `|`을 입력할 수 있습니다.
         System.out.println("true || false: " + (true || false)); // true
         System.out.println("false || false: " + (false || false)); // false
         System.out.println("true || true: " + (true || true)); // true
@@ -180,7 +183,7 @@ public class Lect6 {
         System.out.println(age2 > 18 || isStudent2); // true
 
         /// NOT 연산자(!)
-        // NOT 연산자(! ) true 일때 false로,  false 일때  true 로 변경합니다.
+        // NOT 연산자(!) true 일때 false로,  false 일때  true 로 변경
         //`true` → `false`
         //`false` → `true`
         System.out.println("!true: " + (!true));  // false
@@ -189,53 +192,90 @@ public class Lect6 {
         int age3 = 20;
         boolean isStudent3 = true;
         System.out.println(age3 > 18 && isStudent3); // true
+        System.out.println(age3 > 18 && !isStudent3); // false
 
-        // 연산자 우선순위 - 우선순위가 헷갈리신다면 프로그래밍에서는 괄호 ()를 적극적으로 사용하는 것이 좋습니다.
-        // 산술 연산자 우선순위
+        ///  논리 연산자 정리
+        //연산자	    |설명	                        |예제	            |결과
+        //&& (AND) 	|두 조건이 모두 참일 때만 true	    |true && true	    |true
+        //		                                    |true && false	    |false
+        //		                                    |false && true	    |false
+        //|| (OR)	|하나라도 참이면 true 	            |true || true	    |true
+        //		                                    |true || false	    |true
+        //		                                    |false || true	    |true
+        //		                                    |false || false	    |false
+        //! (NOT)	|참이면 거짓, 거짓이면 참으로 변경	|!true	            |false
+        //		                                    |!false	            |true
+
+
+
+        /// 연산자 우선순위
+        // 우선순위가 헷갈리신다면 프로그래밍에서는 괄호 ()를 적극적으로 사용하는 것이 좋습니다.
+        // 예시
+        //2 + 3 * 4; // 헷갈릴 수 있음
+        //2 + (3 * 4) // 명확함
+
+        /// 산술 연산자 우선순위
+        //기본적인 수학 사칙연산 우선순위가 적용됩니다.
         System.out.println(10 - 3 * 2);
         // 실행 순서: 10 - (3 * 2)
-        // → 10 - 6
-        // → 4
+        //        → 10 - 6
+        //        → 4
 
-        //기본 연산자 우선순위
+        /// 기본 연산자 우선순위
+        // 우선순위 : 산술 → 비교 → 논리 → 대입)
         boolean flag = 10 + 5 > 12 && true;
         // boolean flag = ((10 + 5) > 12) && true;
         System.out.println(flag);
         // 실행 순서: (10 + 5) > 12 && true : 산술
-        // → 15 > 12 && true : 비교
-        // → true && true : 논리
-        // → flag = true 대입
+        //          → 15 > 12 && true : 비교
+        //          → true && true : 논리
+        //          → flag = true 대입
 
-        //비교 연산자와 산술 연산자의 우선순위
+        /// 비교 연산자와 산술 연산자의 우선순위
         System.out.println(10 - 3 > 5 + 1);
         // 실행 순서: (10 - 3) > (5 + 1) : 산술
-        // → 7 > 6 : 비교
-        // → true
+        //          → 7 > 6 : 비교
+        //          → true
 
-        //논리 연산자 우선순위 (not > and > or) ( !  → && → || )
+        /// 논리 연산자 우선순위 (not > and > or) ( !  → && → || )
+        // ! 가 제일 먼저 연산 됩니다. 두 번째로 && , 마지막으로 ||
         boolean result1 = true || false && false;
         System.out.println("result1 = " + result1);
+
+        // 좋은 표기
+        // boolean result1 = true || (false && false);
 
         boolean result2 = true || false && !false;
         System.out.println("result2 = " + result2);
         // 실행 순서: true || (false && false)
-        // → true || false
-        // → true
+        //          → true || false
+        //          → true
 
+        // 좋은 표기
+        // boolean result2 = true || (false && (!false));
+
+
+        ///  생각해보기
         System.out.println(10 / 2 + 3 * 2 > 10 || false);
         // 실행 순서: ((10 / 2) + (3 * 2)) > 10 || false
-        // → (5 + 6) > 10 || false
-        // → 11 > 10 || false
-        // → true || false
-        // → true
+        //          → (5 + 6) > 10 || false
+        //          → 11 > 10 || false
+        //          → true || false
+        //          → true
 
         System.out.println(5 + 3 > 2 * 4 && 10 % 3 == 1);
         // 실행 순서: (5 + 3) > (2 * 4) && (10 % 3) == 1
-        // → 8 > 8 && 1 == 1
-        // → false && true
-        // → false
+        //          → 8 > 8 && 1 == 1
+        //          → false && true
+        //          → false
 
-        // 문자열 비교에서는 항상 .equals() 활용할 것
+
+        /// 문자열 비교
+        // 문자열 비교에서는 항상 .equals() 활용할 것 (동등성 / 동일성 문제)
+
+        // 실무에서 문자열 비교할 때 == 를 사용하는 경우 거의 없다.
+        // 문자열 비교에 == 를 쓰지 않는 이유는
+        // ==는 문자열 값을 비교하는 것이 아니라 메모리 주소를 비교하는 방식이기 때문입니다.
         String text1 = "hello";
         String text2 = "Hello";
         // 나쁜예 : (text1 == text2)
