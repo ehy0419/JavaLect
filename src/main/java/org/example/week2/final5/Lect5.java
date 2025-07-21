@@ -78,5 +78,13 @@ public class Lect5 {
 
         // 상수 활용 방법
         System.out.println("상수 활용: " + Circle.PI);
+
+        ///  불변객체(Immutable Object)
+        // 특징
+        //- `불변객체`는 내부 상태를 변경할 수 없는 객체입니다.
+        //- `final` 을 속성(property, field) 에 활용합니다.
+        //- 세터(setter) 없이 설계 합니다.
+        //- 변경이 필요할 경우 새로운 객체를 만들어야 합니다.
+        //- 예) `String` , `Integer` , `래퍼클래스` 등
     }
 }
